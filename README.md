@@ -1,6 +1,6 @@
 Calculadora de pilha android em java
 
-Criado por:
+*Criado por:*
 
 Laura Theodoro Moreira
 
