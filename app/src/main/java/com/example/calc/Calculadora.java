@@ -1,7 +1,5 @@
 package com.example.calc;
 
-import android.os.Bundle;
-
 import java.util.Stack;
 
 public class Calculadora {
