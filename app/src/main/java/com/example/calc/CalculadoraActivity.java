@@ -1,9 +1,6 @@
 package com.example.calc;
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +12,7 @@ import com.example.calc.Calculadora;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-public class CalculadoraActivity extends AppCompatActivity {
+public class CalculadoraActivity extends Activity {
 
     Calculadora calculadora = new  Calculadora();
 

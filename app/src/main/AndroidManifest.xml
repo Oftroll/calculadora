@@ -17,11 +17,6 @@
         <uses-library
             android:name="com.google.android.wearable"
             android:required="false" />
-
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
@@ -38,7 +33,7 @@
             android:name=".FibonnaciActivity"
             android:label="fibonnaci">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.CALL" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -48,7 +43,7 @@
             android:label="@string/title_activity_caculadora"
             tools:ignore="Instantiatable">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.CALL" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

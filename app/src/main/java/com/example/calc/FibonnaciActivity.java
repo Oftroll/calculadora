@@ -1,5 +1,6 @@
 package com.example.calc;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -7,11 +8,7 @@ import android.widget.TextView;
 
 import com.example.calc.Fibonnaci;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.EmptyStackException;
-
-public class FibonnaciActivity extends AppCompatActivity {
+public class FibonnaciActivity extends Activity {
 
     Fibonnaci fibo = new Fibonnaci();
 
