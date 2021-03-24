@@ -1,4 +1,4 @@
-**DickEx de pilha android em java**
+**DickEx android em java**
 
 **Criado por:**
 
