@@ -1,4 +1,4 @@
-**Calculadora de pilha android em java**
+**DickEx de pilha android em java**
 
 **Criado por:**
 
