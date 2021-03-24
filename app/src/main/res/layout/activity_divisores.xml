@@ -4,75 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FibonnaciActivity">
+    tools:context=".DivisoresActivity">
+
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView3"
         android:layout_width="158dp"
         android:layout_height="46dp"
         android:layout_marginTop="28dp"
+        android:layout_marginBottom="13dp"
         android:src="@mipmap/logo1_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/teste2"
+        app:layout_constraintBottom_toTopOf="@+id/teste3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/ler"
+        android:id="@+id/leitor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resposta" />
+        app:layout_constraintTop_toBottomOf="@+id/resposta2"
+        app:layout_constraintVertical_bias="0.033" />
 
     <TextView
-        android:id="@+id/resposta"
+        android:id="@+id/resposta2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="12dp"
         android:text="..."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/teste2" />
+        app:layout_constraintTop_toBottomOf="@+id/teste3" />
+
+    <TextView
+        android:id="@+id/teste3"
+        android:layout_width="72dp"
+        android:layout_height="19dp"
+        android:text="Divisores:"
+        android:textColor="#FF6200EE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
-        android:id="@+id/calcular_fibo"
+        android:id="@+id/btnEmpilhar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:onClick="calcular"
         android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ler" />
+        app:layout_constraintTop_toBottomOf="@+id/leitor2"
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
-        android:id="@+id/teste2"
+        android:id="@+id/alert2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="Elemento da Sequencia"
+        android:textColor="#F00"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/alert_fb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="66dp"
-        android:textColor="#FF0000"
-        app:layout_constraintBottom_toTopOf="@+id/ler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.629"
-        app:layout_constraintStart_toEndOf="@+id/teste2" />
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toEndOf="@+id/teste3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

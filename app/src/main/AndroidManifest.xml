@@ -10,21 +10,32 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="DICEX"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Calc">
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="false" />
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
-
 
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MultiplosActivity"
+            android:label="Multiplos">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DivisoresActivity"
+            android:label="Divisores">
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

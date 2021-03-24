@@ -3,14 +3,9 @@ package com.example.calc;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.calc.Calculadora;
-
-import java.util.EmptyStackException;
-import java.util.Stack;
 
 public class CalculadoraActivity extends Activity {
 
@@ -21,66 +16,26 @@ public class CalculadoraActivity extends Activity {
         setContentView(R.layout.activity_caculadora);
     }
 
-    public void empilhar(View v){
-        try {
-            EditText numero = (EditText) findViewById(R.id.leitor);
-            calculadora.pilha.push(Integer.parseInt(numero.getText().toString()));
-            numero.setText("");
-            atualizar();
-        }catch (NumberFormatException e){
-            alert("Erro: Digite o valor a ser empilhado");
-        }
 
-
-    }
-
-    public void desempilhar(View v){
-        try {
-            calculadora.pilha.pop();
-            atualizar();
-        }catch (EmptyStackException e){
-            alert("Erro: Stack Vazio");
-        }
-
-    }
     public void calcular(View v){
-        Button botao = (Button) v;
 
-        char valor =  botao.getText().charAt(0);
-
-        try {
-            if(valor == '/'){
-                calculadora.dividir();
-            }else if(valor == '*'){
-                calculadora.multiplicar();
-            }else if(valor == '+'){
-                calculadora.somar();
-            }else{
-                calculadora.subtrair();
-            }
+        EditText inputExpressao = (EditText) findViewById(R.id.leitor);
+        String expressao =  inputExpressao.getText().toString();
+        try{
+            calculadora.limpar();
+            calculadora.getResposta(expressao);
             atualizar();
-        }catch (EmptyStackException e) {
-            atualizar();
-            alert("Erro: Stack Vazio");
-
-        }catch (ArithmeticException e) {
-            atualizar();
-            alert("Erro: Divisão por 0 é impossivel");
+        }catch (Exception e){
+            alert("erro fatal");
         }
     }
 
-    public static Stack<Integer> inverter(Stack<Integer> pilha) {
-        Stack<Integer> inverso = new Stack<Integer>();
-        for (int i = pilha.size()-1; i >= 0; i--
-        ) {
-            inverso.push(pilha.get(i));
-        }
-        return inverso;
-    }
     public void atualizar(){
         alert("");
-        TextView viewStack = (TextView) findViewById(R.id.stack);
-        viewStack.setText(inverter(calculadora.pilha).toString());
+        TextView viewExpressao = (TextView) findViewById(R.id.expressao);
+        TextView viewResp = (TextView) findViewById(R.id.resposta1);
+        viewExpressao.setText(calculadora.expressao);
+        viewResp.setText(calculadora.resposta.toString());
     }
     public void alert(String msg){
         TextView viewAlert = (TextView) findViewById(R.id.alert);

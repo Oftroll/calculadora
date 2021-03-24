@@ -8,4 +8,6 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_caculadora">Caculadora</string>
     <string name="title_activity_fibonnaci">FibonnaciActivity</string>
+    <string name="title_activity_divisores">Divisores</string>
+    <string name="title_activity_multiplos">Multiplos</string>
 </resources>
