@@ -1,4 +1,4 @@
-**DickEx android em java**
+**DicEx android em java**
 
 **Criado por:**
 
